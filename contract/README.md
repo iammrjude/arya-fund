@@ -6,7 +6,7 @@ A trustless crowdfunding smart contract built on the Stellar network using Sorob
 
 ## Live Demo
 
-> Frontend: _coming soon_
+> Frontend: <https://arya-crowdfund.vercel.app>
 
 ---
 
@@ -35,7 +35,7 @@ A trustless crowdfunding smart contract built on the Stellar network using Sorob
 ## Project Structure
 
 ```text
-arya-fund-contract/
+contract/
 ├── contracts/
 │   └── arya_fund/
 │       ├── src/

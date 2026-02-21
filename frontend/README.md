@@ -6,7 +6,7 @@ The React frontend for AryaFund, a decentralized crowdfunding dApp built on the 
 
 ## Live Demo
 
-> _coming soon_
+> <https://arya-crowdfund.vercel.app>
 
 ---
 
@@ -148,7 +148,7 @@ src/
 
 ## Related
 
-- [Smart Contract README](../arya-fund-contract/README.md)
+- [Smart Contract README](../contract/README.md)
 - [Stellar Wallets Kit](https://github.com/Creit-Tech/Stellar-Wallets-Kit)
 - [Soroban Docs](https://soroban.stellar.org)
 - [Stellar Expert (Testnet)](https://stellar.expert/explorer/testnet)

@@ -2,8 +2,8 @@
 
 A decentralized crowdfunding dApp built on the Stellar network. Anyone can create campaigns, collect XLM donations, and receive automatic refunds if goals are not met — all enforced by smart contracts with no middleman.
 
-> **Network:** Stellar Testnet
-> **Live Demo:** _coming soon_
+- **Network:** Stellar Testnet
+- **Live Demo:** <https://arya-crowdfund.vercel.app>
 
 ---
 
@@ -30,7 +30,7 @@ If a campaign raises 70%+ but misses its deadline, the organizer gets a 7-day ac
 
 ```text
 arya-fund/
-├── arya-fund-contract/     # Soroban smart contract (Rust)
+├── contract/     # Soroban smart contract (Rust)
 │   ├── contracts/
 │   │   └── arya_fund/
 │   │       ├── src/
@@ -40,7 +40,7 @@ arya-fund/
 │   ├── Cargo.toml
 │   └── README.md
 │
-└── arya-fund-frontend/     # React frontend
+└── frontend/     # React frontend
     ├── src/
     │   ├── contract/       # Contract client and config
     │   ├── hooks/          # useWallet, useContract
@@ -89,7 +89,7 @@ arya-fund/
 ### Run the Smart Contract
 
 ```bash
-cd arya-fund-contract
+cd contract
 
 # Build
 stellar contract build
@@ -98,12 +98,12 @@ stellar contract build
 cargo test --manifest-path=contracts/arya_fund/Cargo.toml
 ```
 
-See [arya-fund-contract/README.md](arya-fund-contract/README.md) for full deployment instructions.
+See [contract/README.md](contract/README.md) for full deployment instructions.
 
 ### Run the Frontend
 
 ```bash
-cd arya-fund-frontend
+cd frontend
 
 # Install
 npm install
@@ -114,7 +114,7 @@ npm run dev
 
 Opens at `http://localhost:5173`
 
-See [arya-fund-frontend/README.md](arya-fund-frontend/README.md) for full setup details.
+See [frontend/README.md](frontend/README.md) for full setup details.
 
 ---
 
@@ -141,9 +141,19 @@ See [arya-fund-frontend/README.md](arya-fund-frontend/README.md) for full setup 
 
 ---
 
+## Contributing
+
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
+
+To report a bug or request a feature, [open an issue](../../issues/new/choose).
+
+---
+
 ## Links
 
 - [Stellar Expert — Contract](https://stellar.expert/explorer/testnet/contract/CDX4KDWSCBCD7JU6NVDGEJ47NWCTMG7DM43ATJKQA52UPLGZXXQ6VRRW)
+- [Contract Explorer — Contract info, Invoke contract](https://lab.stellar.org/r/testnet/contract/CDX4KDWSCBCD7JU6NVDGEJ47NWCTMG7DM43ATJKQA52UPLGZXXQ6VRRW)
 - [Stellar Expert — Deploy TX](https://stellar.expert/explorer/testnet/tx/875794a81462c12c94f312ab8256c030d4c2ef17e300e90d193849d927d531c5)
 - [Soroban Docs](https://soroban.stellar.org)
 - [Stellar Wallets Kit](https://github.com/Creit-Tech/Stellar-Wallets-Kit)
+- [Attestation Verification Flow](https://github.com/stellar/stellar-protocol/blob/master/ecosystem/sep-0055.md#attestation-verification-flow)
