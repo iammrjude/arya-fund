@@ -1,0 +1,32 @@
+import { Link } from 'react-router-dom'
+import StatusBadge from '../StatusBadge/StatusBadge'
+import ProgressBar from '../ProgressBar/ProgressBar'
+import CountdownTimer from '../CountdownTimer/CountdownTimer'
+import { truncateAddress } from '../../utils/stellar'
+import styles from './CampaignCard.module.css'
+
+export default function CampaignCard({ campaign }) {
+    const { id, title, description, goal_amount, total_raised, deadline, organizer, status } = campaign
+
+    const statusLabel = status[0]
+
+    return (
+        <Link to={`/campaign/${id}`} className={styles.card}>
+            <div className={styles.cardHeader}>
+                <h3 className={styles.title}>{title}</h3>
+                <StatusBadge status={statusLabel} />
+            </div>
+            <p className={styles.description}>{description}</p>
+            <div className={styles.progress}>
+                <ProgressBar totalRaised={total_raised} goalAmount={goal_amount} />
+            </div>
+            <div className={styles.footer}>
+                <CountdownTimer deadlineTs={deadline} label="Ends in" />
+                <div className={styles.organizer}>
+                    <span className={styles.organizerLabel}>by</span>
+                    <span className={styles.organizerAddress}>{truncateAddress(organizer)}</span>
+                </div>
+            </div>
+        </Link>
+    )
+}
