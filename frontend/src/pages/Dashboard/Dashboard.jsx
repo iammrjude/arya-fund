@@ -93,7 +93,10 @@ export default function Dashboard() {
                 <div className={styles.list}>
                     {myCampaigns.map(campaign => {
                         const statusLabel = campaign.status[0]
-                        const isActive = statusLabel === 'active'
+                        const displayStatus = (Number(campaign.total_raised) >= Number(campaign.goal_amount) && statusLabel === 'Active')
+                            ? 'Goal Met'
+                            : statusLabel
+                        const isActive = statusLabel === 'Active'
                         const deadlinePassed = isExpired(campaign.deadline)
                         const actionWindowExpiry = settings
                             ? getActionWindowExpiry(campaign.deadline, settings.action_window_days)
@@ -106,7 +109,7 @@ export default function Dashboard() {
                         const percent = goal > 0 ? (raised / goal) * 100 : 0
                         const canExtend = isActive && deadlinePassed && !campaign.extension_used && inActionWindow && percent >= 70
                         const canWithdraw = isActive && raised >= goal
-                        const canMarkFailed = isActive
+                        const canMarkFailed = isActive && percent < 70 && deadlinePassed && inActionWindow
 
                         return (
                             <div key={campaign.id} className={styles.card}>
@@ -115,7 +118,7 @@ export default function Dashboard() {
                                         <Link to={`/campaign/${campaign.id}`} className={styles.cardTitle}>
                                             {campaign.title}
                                         </Link>
-                                        <StatusBadge status={statusLabel} />
+                                        <StatusBadge status={displayStatus} />
                                     </div>
                                 </div>
 

@@ -247,6 +247,9 @@ export default function Admin() {
                         <div className={styles.campaignList}>
                             {filteredCampaigns.map(c => {
                                 const statusLabel = c.status[0]
+                                const displayStatus = (Number(c.total_raised) >= Number(c.goal_amount) && statusLabel === 'Active')
+                                    ? 'Goal Met'
+                                    : statusLabel
                                 return (
                                     <div key={c.id} className={styles.campaignRow}>
                                         <div className={styles.campaignInfo}>
@@ -256,7 +259,7 @@ export default function Admin() {
                                         <div className={styles.campaignMeta}>
                                             <span className={styles.campaignOrganizer}>{truncateAddress(c.organizer)}</span>
                                             <span className={styles.campaignRaised}>{stroopsToXlm(c.total_raised)} XLM</span>
-                                            <StatusBadge status={statusLabel} />
+                                            <StatusBadge status={displayStatus} />
                                         </div>
                                     </div>
                                 )

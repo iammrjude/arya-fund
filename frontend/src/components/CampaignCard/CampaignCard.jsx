@@ -9,12 +9,15 @@ export default function CampaignCard({ campaign }) {
     const { id, title, description, goal_amount, total_raised, deadline, organizer, status } = campaign
 
     const statusLabel = status[0]
+    const displayStatus = (Number(campaign.total_raised) >= Number(campaign.goal_amount) && statusLabel === 'Active')
+        ? 'Goal Met'
+        : statusLabel
 
     return (
         <Link to={`/campaign/${id}`} className={styles.card}>
             <div className={styles.cardHeader}>
                 <h3 className={styles.title}>{title}</h3>
-                <StatusBadge status={statusLabel} />
+                <StatusBadge status={displayStatus} />
             </div>
             <p className={styles.description}>{description}</p>
             <div className={styles.progress}>

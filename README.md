@@ -9,7 +9,40 @@ A decentralized crowdfunding dApp built on the Stellar network. Anyone can creat
 
 ## Screenshots
 
-> _coming soon_
+### Home Page — Wallet Not Connected
+
+![Home page with no wallet connected](screenshots/home-disconnected.png)
+*The home page as seen by a first-time visitor with no wallet connected. Campaign cards are visible and browsable without needing to connect a wallet.*
+
+### Home Page — Wallet Connection Modal
+
+![Wallet selection modal showing available wallet options](screenshots/home-wallet-modal.png)
+*Clicking the Connect Wallet button opens the Stellar Wallets Kit modal, showing all supported wallets — Freighter, Albedo, xBull, Rabet, and LOBSTR.*
+
+### Home Page — Wallet Connected
+
+![Home page with wallet connected](screenshots/home-connected.png)
+*The home page after successfully connecting a wallet. The connected address is displayed in the top right corner.*
+
+### Campaign Page — Goal Reached
+
+![Campaign page showing goal reached state](screenshots/campaign-goal-reached.png)
+*A campaign that has reached 100% of its funding goal. The donate form is replaced with a Goal Reached message, and the organizer can now withdraw funds from their dashboard.*
+
+### Create Campaign Page
+
+![Empty campaign creation form](screenshots/create-empty.png)
+*The campaign creation form where organizers can set a title, description, funding goal, deadline, and extension days.*
+
+### Dashboard — No Campaigns
+
+![Dashboard page with no campaigns yet](screenshots/dashboard-no-campaigns.png)
+*The organizer dashboard when the connected wallet has not yet created any campaigns.*
+
+### Admin Page — Access Denied
+
+![Admin page showing access denied for non-owner wallet](screenshots/admin-access-denied.png)
+*The admin panel when accessed by a wallet that is not the platform owner. Access is restricted to protect platform settings.*
 
 ---
 
@@ -35,7 +68,7 @@ arya-fund/
 │   │   └── arya_fund/
 │   │       ├── src/
 │   │       │   ├── lib.rs      # 17 exported functions
-│   │       │   └── test.rs     # 12 unit tests
+│   │       │   └── test.rs     # 25 unit tests
 │   │       └── Cargo.toml
 │   ├── Cargo.toml
 │   └── README.md
@@ -63,6 +96,18 @@ arya-fund/
 | **Action Window** | 7 days |
 | **Deploy TX** | `95478ead278154ae67b279cdce1492715f2e37079d5ed41253710dbc017e2ab6` |
 | **Init TX** | `8e29274c189a60e436da4d2c8aa807a3472ecc7584ad69a6891286312b69e64b` |
+
+### Verified Contract Calls
+
+| Action | Transaction |
+| -------- | ------------- |
+| Create Campaign (1000 XLM goal) | [`aed99ba9...`](https://stellar.expert/explorer/testnet/tx/aed99ba9f25edd405b96baf142e1fb77dd6c3f388b53f0a3c66188ca7457bd47) |
+| Donate 120 XLM | [`ca0e0fd7...`](https://stellar.expert/explorer/testnet/tx/ca0e0fd7ebc7b446ac4d0b7de8e6164490cb343bb5a59c6d8c5c3e3262c78599) |
+| Donate 500 XLM | [`970d73e8...`](https://stellar.expert/explorer/testnet/tx/970d73e8cf8c5aba408e1da4b1a2cb9c2141c123d69bff8b11a0bb7ca607208a) |
+| Donate 80 XLM | [`98020ff7...`](https://stellar.expert/explorer/testnet/tx/98020ff70c1d55eb0855efed99fe0511f85a5c50d0e1a8b051bf699b890b4ea0) |
+| Donate 300 XLM | [`27c954cd...`](https://stellar.expert/explorer/testnet/tx/27c954cde49216022b05caa7bf4ebb802f570ee1b8fe55b9d27dec0580a5f853) |
+| Update Fee to 2% | [`4586967e...`](https://stellar.expert/explorer/testnet/tx/4586967eff85adcf713a2441a1d122030343eac5f2a5c2b6d5edb69e8940ebd5) |
+| Update Action Window to 5 days | [`4f4691ed...`](https://stellar.expert/explorer/testnet/tx/4f4691ed1ed72b78977348c6ffc023888bc1820dce30c0a8408f4f5b1f0c4f0e) |
 
 ---
 

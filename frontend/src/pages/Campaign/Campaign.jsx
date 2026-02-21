@@ -104,6 +104,9 @@ export default function Campaign() {
     )
 
     const statusLabel = campaign.status[0]
+    const displayStatus = (Number(campaign.total_raised) >= Number(campaign.goal_amount) && statusLabel === 'Active')
+        ? 'Goal Met'
+        : statusLabel
     const isActive = statusLabel === 'Active'
     const isSuccessful = statusLabel === 'Successful'
     const isFailed = statusLabel === 'Failed'
@@ -115,7 +118,7 @@ export default function Campaign() {
                 <div className={styles.header}>
                     <div className={styles.titleRow}>
                         <h1 className={styles.title}>{campaign.title}</h1>
-                        <StatusBadge status={statusLabel} />
+                        <StatusBadge status={displayStatus} />
                     </div>
                     <p className={styles.organizer}>
                         by <span className={styles.address}>{truncateAddress(campaign.organizer, 8, 8)}</span>

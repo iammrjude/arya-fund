@@ -76,7 +76,7 @@ cd contract
 # Build the contract
 stellar contract build
 
-# Run tests (all 12 should pass)
+# Run tests (all 25 should pass)
 cargo test --manifest-path=contracts/arya_fund/Cargo.toml
 ```
 
