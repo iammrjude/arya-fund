@@ -34,8 +34,8 @@ The React frontend for AryaFund, a decentralized crowdfunding dApp built on the 
 | Property | Value |
 | ---------- | ------- |
 | **Network** | Stellar Testnet |
-| **Contract Address** | `CDX4KDWSCBCD7JU6NVDGEJ47NWCTMG7DM43ATJKQA52UPLGZXXQ6VRRW` |
-| **Deploy TX** | `875794a81462c12c94f312ab8256c030d4c2ef17e300e90d193849d927d531c5` |
+| **Contract Address** | `CD5LOATI5SDME7GQXRBVSZIG3DZL4NRYD4663GM7PLPY252L2RGPOFTL` |
+| **Deploy TX** | `95478ead278154ae67b279cdce1492715f2e37079d5ed41253710dbc017e2ab6` |
 
 ---
 
@@ -85,7 +85,7 @@ npm run build
 No `.env` file needed. All configuration is in `src/contract/config.js`:
 
 ```js
-export const CONTRACT_ID = 'CDX4KDWSCBCD7JU6NVDGEJ47NWCTMG7DM43ATJKQA52UPLGZXXQ6VRRW'
+export const CONTRACT_ID = 'CD5LOATI5SDME7GQXRBVSZIG3DZL4NRYD4663GM7PLPY252L2RGPOFTL'
 export const NATIVE_TOKEN_ID = 'CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC'
 export const NETWORK_PASSPHRASE = 'Test SDF Network ; September 2015'
 export const RPC_URL = 'https://soroban-testnet.stellar.org'

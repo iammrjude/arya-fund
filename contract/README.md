@@ -15,8 +15,8 @@ A trustless crowdfunding smart contract built on the Stellar network using Sorob
 | Property | Value |
 | ---------- | ------- |
 | **Network** | Stellar Testnet |
-| **Contract Address** | `CDX4KDWSCBCD7JU6NVDGEJ47NWCTMG7DM43ATJKQA52UPLGZXXQ6VRRW` |
-| **Wasm Hash** | `96a568d285751177ec8119cd097771e8a1c354d1ead54ce3ef978447c971d638` |
+| **Contract Address** | `CD5LOATI5SDME7GQXRBVSZIG3DZL4NRYD4663GM7PLPY252L2RGPOFTL` |
+| **Wasm Hash** | `486ee96c78bac0ba19b698d8a808caf59fd36c19b05d0f71ab2b363596afef8d` |
 | **Native XLM SAC** | `CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC` |
 | **Platform Owner** | `GBLH7QUEY43J3AJSIYPRUQKKUFX577GSYWRRQJVNFOV7MUON3YMM5IJQ` |
 | **Treasury Wallet** | `GAZZRHDL3SUTFD2CWWDVVHQXGVXWWQYTJNGMC6IQIQD7OAKQLDBJND7B` |
@@ -27,8 +27,8 @@ A trustless crowdfunding smart contract built on the Stellar network using Sorob
 
 | Event | Transaction Hash |
 | ------- | ----------------- |
-| Deploy | `875794a81462c12c94f312ab8256c030d4c2ef17e300e90d193849d927d531c5` |
-| Initialize | `c39d4ecea886359c4348142d735d81b33912c551520e2f3aac657bda34887db9` |
+| Deploy | `95478ead278154ae67b279cdce1492715f2e37079d5ed41253710dbc017e2ab6` |
+| Initialize | `8e29274c189a60e436da4d2c8aa807a3472ecc7584ad69a6891286312b69e64b` |
 
 ---
 

@@ -107,6 +107,7 @@ export default function Campaign() {
     const isActive = statusLabel === 'Active'
     const isSuccessful = statusLabel === 'Successful'
     const isFailed = statusLabel === 'Failed'
+    const goalReached = Number(campaign.total_raised) >= Number(campaign.goal_amount)
 
     return (
         <div className={styles.page}>
@@ -166,7 +167,7 @@ export default function Campaign() {
                             </div>
                         </div>
 
-                        {isActive && (
+                        {isActive && !goalReached && (
                             <div className={styles.card}>
                                 <h2 className={styles.sectionTitle}>Donate XLM</h2>
                                 <div className={styles.donateForm}>
@@ -195,6 +196,15 @@ export default function Campaign() {
                                         )}
                                     </button>
                                 </div>
+                            </div>
+                        )}
+
+                        {isActive && goalReached && (
+                            <div className={styles.card}>
+                                <h2 className={styles.sectionTitle}>Goal Reached! 🎉</h2>
+                                <p className={styles.refundNote}>
+                                    This campaign has reached its goal. The organizer can now withdraw funds from their dashboard.
+                                </p>
                             </div>
                         )}
 

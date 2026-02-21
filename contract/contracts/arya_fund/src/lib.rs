@@ -150,6 +150,12 @@ impl AryaFund {
             panic!("Campaign deadline has passed");
         }
 
+        // Check donation does not exceed goal
+        let new_total = campaign.total_raised + amount;
+        if new_total > campaign.goal_amount {
+            panic!("Donation would exceed campaign goal");
+        }
+
         // Transfer XLM from donor to contract using native SAC
         let native_token = get_native_token(&env);
         native_token.transfer(&donor, &env.current_contract_address(), &amount);

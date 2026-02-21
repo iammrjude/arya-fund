@@ -57,12 +57,12 @@ arya-fund/
 
 | Property | Value |
 | ---------- | ------- |
-| **Contract Address** | `CDX4KDWSCBCD7JU6NVDGEJ47NWCTMG7DM43ATJKQA52UPLGZXXQ6VRRW` |
+| **Contract Address** | `CD5LOATI5SDME7GQXRBVSZIG3DZL4NRYD4663GM7PLPY252L2RGPOFTL` |
 | **Network** | Stellar Testnet |
 | **Platform Fee** | 2.5% on successful withdrawals |
 | **Action Window** | 7 days |
-| **Deploy TX** | `875794a81462c12c94f312ab8256c030d4c2ef17e300e90d193849d927d531c5` |
-| **Init TX** | `c39d4ecea886359c4348142d735d81b33912c551520e2f3aac657bda34887db9` |
+| **Deploy TX** | `95478ead278154ae67b279cdce1492715f2e37079d5ed41253710dbc017e2ab6` |
+| **Init TX** | `8e29274c189a60e436da4d2c8aa807a3472ecc7584ad69a6891286312b69e64b` |
 
 ---
 
@@ -151,9 +151,10 @@ To report a bug or request a feature, [open an issue](../../issues/new/choose).
 
 ## Links
 
-- [Stellar Expert — Contract](https://stellar.expert/explorer/testnet/contract/CDX4KDWSCBCD7JU6NVDGEJ47NWCTMG7DM43ATJKQA52UPLGZXXQ6VRRW)
-- [Contract Explorer — Contract info, Invoke contract](https://lab.stellar.org/r/testnet/contract/CDX4KDWSCBCD7JU6NVDGEJ47NWCTMG7DM43ATJKQA52UPLGZXXQ6VRRW)
-- [Stellar Expert — Deploy TX](https://stellar.expert/explorer/testnet/tx/875794a81462c12c94f312ab8256c030d4c2ef17e300e90d193849d927d531c5)
+- [Stellar Expert — Contract](https://stellar.expert/explorer/testnet/contract/CD5LOATI5SDME7GQXRBVSZIG3DZL4NRYD4663GM7PLPY252L2RGPOFTL)
+- [Contract Explorer — Contract info, Invoke contract](https://lab.stellar.org/r/testnet/contract/CD5LOATI5SDME7GQXRBVSZIG3DZL4NRYD4663GM7PLPY252L2RGPOFTL)
+- [Stellar Expert — Deploy TX](https://stellar.expert/explorer/testnet/tx/95478ead278154ae67b279cdce1492715f2e37079d5ed41253710dbc017e2ab6)
+- [Stellar Expert — Init TX](https://stellar.expert/explorer/testnet/tx/8e29274c189a60e436da4d2c8aa807a3472ecc7584ad69a6891286312b69e64b)
 - [Soroban Docs](https://soroban.stellar.org)
 - [Stellar Wallets Kit](https://github.com/Creit-Tech/Stellar-Wallets-Kit)
 - [Attestation Verification Flow](https://github.com/stellar/stellar-protocol/blob/master/ecosystem/sep-0055.md#attestation-verification-flow)
