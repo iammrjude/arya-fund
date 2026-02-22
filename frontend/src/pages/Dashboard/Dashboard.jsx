@@ -8,7 +8,7 @@ import CountdownTimer from '../../components/CountdownTimer/CountdownTimer'
 import TxStatus from '../../components/TxStatus/TxStatus'
 import { withdraw, extendDeadline, markAsFailed } from '../../contract/client'
 import { stroopsToXlm } from '../../utils/format'
-import { isExpired, getActionWindowExpiry } from '../../utils/time'
+import { isExpired, getActionWindowExpiry, getCountdown } from '../../utils/time'
 import styles from './Dashboard.module.css'
 
 export default function Dashboard() {
@@ -93,7 +93,11 @@ export default function Dashboard() {
                 <div className={styles.list}>
                     {myCampaigns.map(campaign => {
                         const statusLabel = campaign.status[0]
-                        const displayStatus = (Number(campaign.total_raised) >= Number(campaign.goal_amount) && statusLabel === 'Active')
+                        const raised = Number(campaign.total_raised)
+                        const goal = Number(campaign.goal_amount)
+                        const goalReached = raised >= goal
+                        const countdown = getCountdown(campaign.deadline)
+                        const displayStatus = (goalReached && statusLabel === 'Active')
                             ? 'Goal Met'
                             : statusLabel
                         const isActive = statusLabel === 'Active'
@@ -104,8 +108,6 @@ export default function Dashboard() {
                         const inActionWindow = actionWindowExpiry
                             ? !isExpired(actionWindowExpiry)
                             : false
-                        const raised = Number(campaign.total_raised)
-                        const goal = Number(campaign.goal_amount)
                         const percent = goal > 0 ? (raised / goal) * 100 : 0
                         const canExtend = isActive && deadlinePassed && !campaign.extension_used && inActionWindow && percent >= 70
                         const canWithdraw = isActive && raised >= goal
@@ -125,7 +127,13 @@ export default function Dashboard() {
                                 <div className={styles.cardBody}>
                                     <ProgressBar totalRaised={campaign.total_raised} goalAmount={campaign.goal_amount} />
                                     <div className={styles.cardMeta}>
-                                        <CountdownTimer deadlineTs={campaign.deadline} label="Deadline" />
+                                        {goalReached && !countdown.expired ? (
+                                            <div className={styles.goalMetMessage}>
+                                                <span>{displayStatus}</span>
+                                            </div>
+                                        ) : (
+                                            <CountdownTimer deadlineTs={campaign.deadline} label="Deadline" />
+                                        )}
                                         <div className={styles.raised}>
                                             <span className={styles.raisedLabel}>Raised</span>
                                             <span className={styles.raisedValue}>{stroopsToXlm(campaign.total_raised)} XLM</span>

@@ -242,6 +242,16 @@
   animation: spin 0.7s linear infinite;
 }
 
+.goalMetMessage {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--xlm-gold);
+  font-family: var(--font-mono);
+  padding: 8px 0;
+}
+
 @keyframes shimmer {
   0% { background-position: -200% center; }
   100% { background-position: 200% center; }

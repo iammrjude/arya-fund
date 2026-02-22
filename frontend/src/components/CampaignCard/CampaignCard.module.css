@@ -81,6 +81,16 @@
   min-width: 0;
 }
 
+.goalMetMessage {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--xlm-gold);
+  font-family: var(--font-mono);
+  padding: 8px 0;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }

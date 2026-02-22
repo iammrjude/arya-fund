@@ -9,7 +9,7 @@ import TxStatus from '../../components/TxStatus/TxStatus'
 import { donate, claimRefund, getDonorAmount, isRefundClaimed } from '../../contract/client'
 import { xlmToStroops, stroopsToXlm, basisPointsToPercent } from '../../utils/format'
 import { truncateAddress } from '../../utils/stellar'
-import { formatDate } from '../../utils/time'
+import { formatDate, getCountdown } from '../../utils/time'
 import styles from './Campaign.module.css'
 
 export default function Campaign() {
@@ -104,13 +104,14 @@ export default function Campaign() {
     )
 
     const statusLabel = campaign.status[0]
-    const displayStatus = (Number(campaign.total_raised) >= Number(campaign.goal_amount) && statusLabel === 'Active')
+    const goalReached = Number(campaign.total_raised) >= Number(campaign.goal_amount)
+    const countdown = getCountdown(campaign.deadline)
+    const displayStatus = (goalReached && statusLabel === 'Active')
         ? 'Goal Met'
         : statusLabel
     const isActive = statusLabel === 'Active'
     const isSuccessful = statusLabel === 'Successful'
     const isFailed = statusLabel === 'Failed'
-    const goalReached = Number(campaign.total_raised) >= Number(campaign.goal_amount)
 
     return (
         <div className={styles.page}>
@@ -166,7 +167,13 @@ export default function Campaign() {
                                 goalAmount={campaign.goal_amount}
                             />
                             <div className={styles.timerWrapper}>
-                                <CountdownTimer deadlineTs={campaign.deadline} label="Time Remaining" />
+                                {goalReached && !countdown.expired ? (
+                                    <div className={styles.goalMetMessage}>
+                                        <span>{displayStatus}</span>
+                                    </div>
+                                ) : (
+                                    <CountdownTimer deadlineTs={campaign.deadline} label="Time Remaining" />
+                                )}
                             </div>
                         </div>
 
