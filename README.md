@@ -9,6 +9,11 @@ A decentralized crowdfunding dApp built on the Stellar network. Anyone can creat
 
 ## Screenshots
 
+### Test Output — 25 Tests Passing
+
+![Test output showing 25 tests passing](screenshots/test-output.png)
+*All 25 unit tests passing covering all 17 exported contract functions*
+
 ### Home Page — Wallet Not Connected
 
 ![Home page with no wallet connected](screenshots/home-disconnected.png)
@@ -24,25 +29,50 @@ A decentralized crowdfunding dApp built on the Stellar network. Anyone can creat
 ![Home page with wallet connected](screenshots/home-connected.png)
 *The home page after successfully connecting a wallet. The connected address is displayed in the top right corner.*
 
+### Create Campaign Page
+
+![Empty campaign creation form](screenshots/create-empty.png)
+*The campaign creation form where organizers can set a title, description, funding goal, deadline, and extension days.*
+
+### Campaign Page — Active
+
+![Campaign page showing active state](screenshots/campaign-active-donate-form.png)
+*A campaign that is active, goal has not been met and the deadline has not passed. The donate form is available and users can donate by typing the amount they want to donate.*
+
 ### Campaign Page — Goal Reached
 
 ![Campaign page showing goal reached state](screenshots/campaign-goal-reached.png)
 *A campaign that has reached 100% of its funding goal. The donate form is replaced with a Goal Reached message, and the organizer can now withdraw funds from their dashboard.*
 
-### Create Campaign Page
+### Campaign Page — Successful
 
-![Empty campaign creation form](screenshots/create-empty.png)
-*The campaign creation form where organizers can set a title, description, funding goal, deadline, and extension days.*
+![Campaign page showing successful state](screenshots/campaign-successful.png)
+*A campaign that has reached 100% of its funding goal. The donate form is replaced with a Campaign Successful message, which means that funds have been withdrawn by the organizer.*
 
 ### Dashboard — No Campaigns
 
 ![Dashboard page with no campaigns yet](screenshots/dashboard-no-campaigns.png)
 *The organizer dashboard when the connected wallet has not yet created any campaigns.*
 
+### Dashboard — With Campaigns
+
+![Dashboard page with one or more campaigns](screenshots/dashboard-with-campaigns.png)
+*The organizer dashboard when the connected wallet has created one or more campaigns.*
+
+### Admin Page — Wallet Disconnected
+
+![Admin page prompting the user to connect their wallet to access the admin panel](screenshots/admin-disconnected.png)
+*The admin page when the user has not yet connected their wallet. It prompts the user to connect their wallet to access the admin panel.*
+
 ### Admin Page — Access Denied
 
 ![Admin page showing access denied for non-owner wallet](screenshots/admin-access-denied.png)
-*The admin panel when accessed by a wallet that is not the platform owner. Access is restricted to protect platform settings.*
+*The admin page when accessed by a wallet that is not the platform owner. Access is restricted to protect platform settings.*
+
+### Admin Page — Admin Panel
+
+![Admin page showing the admin panel for owner wallet](screenshots/admin-panel.png)
+*The admin page when accessed by the platform owner's wallet. It shows the Platform Settings card - which shows the settings that the platform owner can update. It also shows the All Campaigns card - which shows all the campaigns on the platform.*
 
 ---
 

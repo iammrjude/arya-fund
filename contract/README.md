@@ -157,10 +157,15 @@ Output: `target/wasm32v1-none/release/arya_fund.wasm`
 cargo test --manifest-path=contracts/arya_fund/Cargo.toml
 ```
 
-All 12 tests should pass:
+#### Test Output
+
+![Test output showing 25 tests passing](../screenshots/test-output.png)
+*All 25 unit tests passing covering all 17 exported contract functions*
+
+All 25 tests should pass:
 
 ```bash
-test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out;
+test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.46s
 ```
 
 ### Deploy
