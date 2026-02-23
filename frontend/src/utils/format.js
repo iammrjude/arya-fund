@@ -24,6 +24,7 @@ export function calcFee(amountStroops, basisPoints) {
 export function calcSuggestedGoal(desiredAmountXlm, basisPoints) {
     const desired = parseFloat(desiredAmountXlm)
     if (isNaN(desired) || desired <= 0) return ''
-    const suggested = desired / (1 - basisPoints / 10000)
+    const feeAmount = desired * (basisPoints / 10000)
+    const suggested = desired + feeAmount
     return suggested.toFixed(2)
 }
