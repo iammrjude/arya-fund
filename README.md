@@ -4,15 +4,11 @@ A decentralized crowdfunding dApp built on the Stellar network. Anyone can creat
 
 - **Network:** Stellar Testnet
 - **Live Demo:** <https://arya-crowdfund.vercel.app>
-- **Demo Video Link:**
+- **Demo Video Link:** <https://youtu.be/DaRBOM1mIoA>
+
+> **Note:** The original recording was 7 minutes long and has been sped up to meet the 1-minute requirement. For the best viewing experience, set the YouTube playback speed to **0.25x** (click the gear icon ⚙️ → Playback speed → 0.25).
 
 ---
-
-## Demo Video
-
-<video src="screenshots/demo-video.mp4" controls></video>
-
-[Watch Demo Video](screenshots/demo-video.mp4)
 
 ## Screenshots
 
